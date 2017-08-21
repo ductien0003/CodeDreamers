@@ -50,7 +50,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.carparkId;
 	}
 
 
@@ -58,7 +58,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public boolean isFull() {
 		// TODO Auto-generated method stub
-		return false;
+		return ;
 	}
 
 

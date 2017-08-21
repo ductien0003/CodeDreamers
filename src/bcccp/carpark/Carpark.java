@@ -133,6 +133,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void recordAdhocTicketExit() {
 		// TODO Auto-generated method stub
+			numberOfCarsParked--;
 		
 	}
 
@@ -141,7 +142,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void registerSeasonTicket(ISeasonTicket seasonTicket) {
 		// TODO Auto-generated method stub
-		
+		this.seasonTicketDAO.registerTicket(seasonTicket);
 	}
 
 
@@ -149,7 +150,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void deregisterSeasonTicket(ISeasonTicket seasonTicket) {
 		// TODO Auto-generated method stub
-		
+		this.seasonTicketDAO.deregisterTicket(seasonTicket);
 	}
 
 

@@ -59,8 +59,20 @@ public class Carpark implements ICarpark {
 	public boolean isFull() {
 		// TODO Auto-generated method stub
 		Date date =new Date();
-		Cale
-		return ;
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date);
+		int dayOfWeek=calendar.get(Calendar.DAY-OFF-WEEK);
+		if(dayOfWeek!=1 || dayOfWeek!=7){
+			if(numberOfCarsParked>=capacity){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		else {
+			return false;
+		}
 	}
 
 

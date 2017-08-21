@@ -58,6 +58,8 @@ public class Carpark implements ICarpark {
 	@Override
 	public boolean isFull() {
 		// TODO Auto-generated method stub
+		Date date =new Date();
+		Cale
 		return ;
 	}
 

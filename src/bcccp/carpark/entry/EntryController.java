@@ -44,7 +44,21 @@ public class EntryController
 	@Override
 	public void buttonPushed() {
 		// TODO Auto-generated method stub
-		
+		if(!outsideSensor.carIsDetected()){
+			ui.display("No car detected");
+		}
+		else{
+			if(!carpark.isFull()){
+				System.out.println("car park is not full");
+				if(!ui.ticketPrinted()){
+					adhocTicket=carpark.issueAdhocTicke();
+					entryType="adhoc";
+					adhocTicket.enter(entryTime);
+					ui.printTicket(carpark.getName(),adhocTicket.getTicketNo(),adhocTicket.getEntryDateTime(),adhocTicket.getBarcode());
+					ui.display("Take Ticket");
+				}
+			}
+		}
 	}
 
 

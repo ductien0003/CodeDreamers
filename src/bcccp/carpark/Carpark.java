@@ -98,7 +98,13 @@ public class Carpark implements ICarpark {
 	@Override
 	public IAdhocTicket getAdhocTicket(String barcode) {
 		// TODO Auto-generated method stub
-		return null;
+		if(adhocTicketDAO.findTicketByBarcode(barcode)!=null){
+			return adhocTicketDAO.findTicketByBarcode(barcode);
+		}
+		else{
+			return null;
+		}
+		
 	}
 
 
@@ -106,7 +112,20 @@ public class Carpark implements ICarpark {
 	@Override
 	public float calculateAddHocTicketCharge(long entryDateTime) {
 		// TODO Auto-generated method stub
-		return 0;
+		float shortStayCharge=5;
+		float longStayCharge=5000;
+		if (System.currenTimeMillis()-entryDateTime<1000){
+			System.out.println(System.currenTimeMillis()+"-"+entryDateTime+"="+(System.currenTimeMillis()-entryDateTime));
+			System.out.println("long stay amount charged");
+			return longStayCharge;
+			
+		}
+		else{
+			System.out.println(System.currenTimeMillis()+"-"+entryDateTime+"="+(System.currenTimeMillis()-entryDateTime));
+			System.out.println("short stay amount charged");
+			return shortStayCharge
+		}
+		
 	}
 
 

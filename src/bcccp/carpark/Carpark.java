@@ -80,7 +80,8 @@ public class Carpark implements ICarpark {
 	@Override
 	public IAdhocTicket issueAdhocTicket() {
 		// TODO Auto-generated method stub
-		return null;
+		
+		return adhocTicketDAO.createTicket(carparkId);
 	}
 
 
@@ -88,6 +89,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void recordAdhocTicketEntry() {
 		// TODO Auto-generated method stub
+		numberOfCarsParked++; // increase the number of car by 1
 		
 	}
 

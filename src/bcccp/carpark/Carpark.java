@@ -22,10 +22,10 @@ public class Carpark implements ICarpark {
 			IAdhocTicketDAO adhocTicketDAO, 
 			ISeasonTicketDAO seasonTicketDAO) {
 		//TODO Implement constructor
-		this.carparkId=name;
-		this.capacity= capacity;
-		this.adhocTicketDAO=adhocTicketDAO;
-		this.seasonTicketDAO=seasonTicketDAO;
+				this.carparkId=name;
+				this.capacity= capacity;
+				this.adhocTicketDAO=adhocTicketDAO;
+				this.seasonTicketDAO=seasonTicketDAO;
 		
 	}
 
@@ -34,6 +34,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void register(ICarparkObserver observer) {
 		// TODO Auto-generated method stub
+		observers.add(observer);
 		
 	}
 

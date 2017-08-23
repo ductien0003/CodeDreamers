@@ -10,7 +10,8 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	
 	//Started coding and checking how to use guthub desktop
 	public AdhocTicketDAO(IAdhocTicketFactory factory) {
-		//TODO Implement constructor
+				//TODO Implement constructor
+				this.factory = factory; //added constructor
 	}
 
 

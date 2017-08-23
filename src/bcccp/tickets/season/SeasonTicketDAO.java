@@ -10,7 +10,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 	public SeasonTicketDAO(IUsageRecordFactory factory) {
-		//TOD Implement constructor
+		this.factory = factory;
 	}
 
 
@@ -27,6 +27,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	@Override
 	public void deregisterTicket(ISeasonTicket ticket) {
 		// TODO Auto-generated method stub
+		this.ticket = ticket;
 
 	}
 
@@ -35,7 +36,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	@Override
 	public int getNumberOfTickets() {
 		// TODO Auto-generated method stub
-		return 0;
+		return tickets;
 	}
 
 

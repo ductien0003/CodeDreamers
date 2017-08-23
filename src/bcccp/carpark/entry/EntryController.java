@@ -30,6 +30,13 @@ public class EntryController
 			ICarSensor is,
 			IEntryUI ui) {
 		//TODO Implement constructor
+		this.entryGate=entryGate;
+		os.registerResponder(this);
+		is.registerResponder(this);
+		outsideSensor=os;
+		this.carpark=carpark;
+		ui.registerController(this);
+		this.ui=ui;
 	}
 
 
@@ -37,7 +44,29 @@ public class EntryController
 	@Override
 	public void buttonPushed() {
 		// TODO Auto-generated method stub
-		
+		if(!outsideSensor.carIsDetected()){
+			ui.display("No car detected");
+		}
+		else{
+			if(!carpark.isFull()){
+				System.out.println("car park is not full");
+				if(!ui.ticketPrinted()){
+					adhocTicket=carpark.issueAdhocTicke();
+					entryType="adhoc";
+					adhocTicket.enter(entryTime);
+					ui.printTicket(carpark.getName(),adhocTicket.getTicketNo(),adhocTicket.getEntryDateTime(),adhocTicket.getBarcode());
+					ui.display("Take Ticket");
+				}
+			else{
+					System.out.println("Ticket already printed, please take your ticket.");
+					ui.display("Ticket already printed");
+			}
+			}
+			else{
+				while(carpark.isFull() && outsideSensor.carIsDetected())
+                ui.display("Full")
+			}
+		}
 	}
 
 

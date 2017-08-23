@@ -105,6 +105,32 @@ public class ExitController
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
 		// TODO Auto-generated method stub
+		if (detectorId.equals(insideSensor.getId()) && detected) {
+                ui.display("Insert Ticket");
+            }
+        if (detectorId.equals(outsideSensor.getId()) && detected) {
+                ui.display("Car Leaving");
+            }
+        if (detectorId.equals(insideSensor.getId()) && !detected) {
+                ui.display("Car Left");
+            }
+        if (detectorId.equals(outsideSensor.getId()) && !detected) {
+            exitGate.lower();
+            ui.display("");
+            exitTime = System.currentTimeMillis();
+            if (adhocTicket != null) {
+                adhocTicket.exit(exitTime);
+                carpark.recordAdhocTicketExit();
+                adhocTicket = null;
+                }
+            else {
+                carpark.recordSeasonTicketExit(seasonTicketId);
+                seasonTicketId = null;
+                }
+                
+            }
+		
+	}
 		
 	}
 

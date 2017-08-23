@@ -57,6 +57,14 @@ public class EntryController
 					ui.printTicket(carpark.getName(),adhocTicket.getTicketNo(),adhocTicket.getEntryDateTime(),adhocTicket.getBarcode());
 					ui.display("Take Ticket");
 				}
+			else{
+					System.out.println("Ticket already printed, please take your ticket.");
+					ui.display("Ticket already printed");
+			}
+			}
+			else{
+				while(carpark.isFull() && outsideSensor.carIsDetected())
+                ui.display("Full")
 			}
 		}
 	}

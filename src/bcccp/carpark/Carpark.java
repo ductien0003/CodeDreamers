@@ -49,7 +49,7 @@ public class Carpark implements ICarpark {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method 
 		return this.carparkId;
 	}
 

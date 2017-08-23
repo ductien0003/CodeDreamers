@@ -94,7 +94,10 @@ public class ExitController
 	@Override
 	public void ticketTaken() {
 		// TODO Auto-generated method stub
-		
+		if(ticketValidated){
+			exitGate.raise();
+			ticketValidated=false;
+		}
 	}
 
 

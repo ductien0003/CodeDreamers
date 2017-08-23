@@ -9,8 +9,12 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 
 
 
-	public SeasonTicketDAO(IUsageRecordFactory factory) {
+	public SeasonTicketDAO(IUsageRecordFactory factory) {<<<<<<< master
+		//TOD Implement constructor  hello this is TIEN
+=======
 		this.factory = factory;
+>>>>>>> satwant
+		
 	}
 
 
@@ -36,7 +40,7 @@ public class SeasonTicketDAO implements ISeasonTicketDAO {
 	@Override
 	public int getNumberOfTickets() {
 		// TODO Auto-generated method stub
-		return tickets;
+		return null;
 	}
 
 

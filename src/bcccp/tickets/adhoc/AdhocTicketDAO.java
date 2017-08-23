@@ -8,9 +8,10 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	private int currentTicketNo;
 
 	
-	
+	//Started coding and checking how to use guthub desktop
 	public AdhocTicketDAO(IAdhocTicketFactory factory) {
-		//TODO Implement constructor
+				//TODO Implement constructor
+				this.factory = factory; //added constructor
 	}
 
 
@@ -18,7 +19,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	@Override
 	public IAdhocTicket createTicket(String carparkId) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.carparkId;
 	}
 
 

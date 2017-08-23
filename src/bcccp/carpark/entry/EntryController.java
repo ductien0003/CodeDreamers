@@ -140,6 +140,24 @@ public class EntryController
 	@Override
 	public void carEventDetected(String detectorId, boolean detected) {
 		// TODO Auto-generated method stub
+		System.out.println(detectorId + " has a car at it: " + detected);
+                if(detectorId == "Entry Outside Sensor"){
+                    if(detected)
+                        ui.display("Press Button");
+                    else
+                        ui.display("");
+                }
+                if ((detectorId == "Entry Inside Sensor") && !detected){
+                
+                    if(entryGate.isRaised()){
+                        ui.display("");
+                        entryGate.lower();
+                    }
+                
+                }
+		
+	}
+
 		
 	}
 

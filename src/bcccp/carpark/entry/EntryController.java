@@ -112,7 +112,18 @@ public class EntryController
 	@Override
 	public void ticketTaken() {
 		// TODO Auto-generated method stub
-		
+		 if(entryType != null && (entryType.contentEquals("adhoc") || entryType.contentEquals("season"))){
+                ui.display("Thank you");
+                entryGate.raise(); 
+                if(entryType.contentEquals("adhoc")){
+                    carpark.recordAdhocTicketEntry();
+                    System.out.println(adhocTicket.getBarcode());
+                }
+                if(entryType.contentEquals("season")){
+                    carpark.recordSeasonTicketEntry(seasonTicketId);
+                    
+                }
+                entryType = "";
 	}
 
 

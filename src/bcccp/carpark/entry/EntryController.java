@@ -74,6 +74,36 @@ public class EntryController
 	@Override
 	public void ticketInserted(String barcode) {
 		// TODO Auto-generated method stub
+		if(!outsideSensor.carIsDetected()){
+                ui.display("No car detected");
+            }
+            else{
+                if(barcode != null){
+                    if(carpark.isSeasonTicketValid(barcode)){
+                        if(carpark.isSeasonTicketInUse(barcode)){
+                            System.out.println("Season ticket valid");
+                            entryType = "season";
+                            ui.display("Take Ticket");
+                        }
+                        else{
+                            System.out.println("Season ticket is in use");
+                            ui.display("ticket in use");
+                        }
+                    }
+                    else{
+                        System.out.println("Season ticket not valid");
+                        ui.display("Ticket Rejected");
+                    }
+                }
+                else{
+                    System.out.println("Season ticket button press, no season ticket entered");
+                    ui.display("");
+                }
+                    
+                    
+
+
+            }
 		
 	}
 

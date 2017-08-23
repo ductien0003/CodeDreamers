@@ -44,8 +44,50 @@ public class ExitController
 	@Override
 	public void ticketInserted(String ticketStr) {
 		// TODO Auto-generated method stub
+		if(!ticketStr.equals("") && insideSensor.carEventDetected()){
+			if(ticketStr.contains("S")){
+				seasonTicketId=ticketStr;
+				if (carpark.isSeasonTicketInUse(seasonTicketId)&&carpark.isSeasonTicketValidated(seasonTicketId)){
+					ui.display("take ticket");
+					ticketValidated=true;
+					ui.beep();
+				}
+
+			}
+			else {
+                    adhocTicket = carpark.getAdhocTicket(ticketStr);
+                    if (adhocTicket != null) {
+                        if (adhocTicket.isCurrent() && adhocTicket.isPaid() && (System.currentTimeMillis() - adhocTicket.getPaidDateTime() <= 900000)) { //900,000ms = 15 minutes
+                            ui.display("take ticket");
+                            ticketValidated = true;
+                            ui.beep();
+                        }
+                        if (System.currentTimeMillis() - adhocTicket.getPaidDateTime() > 900000) {
+                            ui.display("Please Wait For Attendant");
+                        }
+                    }
+                
+                }
+                if (!ticketValidated) {
+                    ui.display("Take Rejected Ticket");
+                }
+            }
+            else {
+                if (ticketStr.equals("")) {
+                    ui.display("No Ticket Inserted");                
+                }
+                else {
+                    ui.display("No Car Detected");
+                }
+                
+            }
+        }
+			
+				
+			}
+		}
 		
-	}
+	
 
 
 

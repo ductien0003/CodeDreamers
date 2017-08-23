@@ -58,25 +58,26 @@ public class SeasonTicket implements ISeasonTicket {
 	@Override
 	public void recordUsage(IUsageRecord record) {
 		// TODO Auto-generated method stub
+		record = startValidPeriod - endValidPeriod;
 
 	}
 
 	@Override
 	public IUsageRecord getCurrentUsageRecord() {
 		// TODO Auto-generated method stub
-		return null;
+		return recordUsage;
 	}
 
 	@Override
 	public void endUsage(long dateTime) {
-		// TODO Auto-generated method stub
+		this.endUsage = dateTime;
 
 	}
 
 	@Override
 	public List<IUsageRecord> getUsageRecords() {
 		// TODO Auto-generated method stub
-		return null;
+		return <IUsageRecord>;
 	}
 
 

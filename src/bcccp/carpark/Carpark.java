@@ -193,7 +193,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void recordSeasonTicketExit(String ticketId) {
 		// TODO Auto-generated method stub
-		
+		seasonTicketDAO.recordTicketExit(ticketId);
 		
 	}
 

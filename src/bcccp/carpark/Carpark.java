@@ -175,8 +175,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public boolean isSeasonTicketInUse(String ticketId) {
 		// TODO Auto-generated method stub
-		ISeasonTicket sTicket=seasonTicketDAO.findTicketById(ticketId);
-		return sTicket.inUse();
+		
 	}
 
 
@@ -184,7 +183,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void recordSeasonTicketEntry(String ticketId) {
 		// TODO Auto-generated method stub
-		seasonTicketDAO.recordSeasonTicketEntry(ticketId);
+		
 		
 	}
 
@@ -193,7 +192,7 @@ public class Carpark implements ICarpark {
 	@Override
 	public void recordSeasonTicketExit(String ticketId) {
 		// TODO Auto-generated method stub
-		seasonTicketDAO.recordSeasonTicketExit(ticketId);
+		
 		
 	}
 

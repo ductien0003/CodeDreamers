@@ -6,7 +6,7 @@ public class AdhocTicketFactory implements IAdhocTicketFactory {
 	//checking the functionality
 	public IAdhocTicket make(String carparkId, int ticketNo) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.carparkId;
 	}
 
 

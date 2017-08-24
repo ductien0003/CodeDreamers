@@ -44,7 +44,7 @@ public class Carpark implements ICarpark {
 	public void deregister(ICarparkObserver observer) {
 		// TODO Auto-generated method stub
 		observers.remove(observer);
-	}
+
 
 
 	

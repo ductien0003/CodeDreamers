@@ -5,8 +5,13 @@ public class UsageRecordFactory implements IUsageRecordFactory {
 	@Override
 	public IUsageRecord make(String ticketId, long startDateTime) {
 		// TODO Auto-generated method stub
+
 		System.out.print("Ticket ID " +ticketId+" is starting at "+startDateTime);
 		return null;
+
+		return this.ticketId;
+		//checking the functionality of merge
+
 	}
 
 

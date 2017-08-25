@@ -15,22 +15,58 @@ public class PaystationController
 	
 
 	public PaystationController(ICarpark carpark, IPaystationUI ui) {
-		//TODO Implement constructor
+		this.carpark=carpark;
+		this.ui=ui;//TODO Implement constructor
 	}
 
 
 
 	@Override
 	public void ticketInserted(String barcode) {
-		// TODO Auto-generated method stub
+		if(!barcode)
+			return 0;
+		else
+		{
+		private Date date;
+		private Date dateCompareOne;
+private Date dateCompareTwo;
+
+private String compareStringOne = "9:45";
+private String compareStringTwo = "1:45";
+
+SimpleDateFormat inputParser = new SimpleDateFormat(inputFormat, Locale.US);
+
+private void compareDates(){
+    Calendar now = Calendar.getInstance();
+
+    int hour = now.get(Calendar.HOUR);
+    int minute = now.get(Calendar.MINUTE);
+
+    date = parseDate(hour + ":" + minute);
+    dateCompareOne = parseDate(compareStringOne);
+    dateCompareTwo = parseDate(compareStringTwo);
+
+    if ( dateCompareOne.before( date ) && dateCompareTwo.after(date)) {
+        //    }
+}
+
+private Date parseDate(String date) {
+
+    try {
+        return inputParser.parse(date);
+    } catch (java.text.ParseException e) {
+        return new Date(0);
+    }
+}// TODO Auto-generated method stub
 		
 	}
-
+	}
 
 
 	@Override
 	public void ticketPaid() {
-		// TODO Auto-generated method stub
+		String ticketStr = barcodeTextField.getText();
+		controller.ticketInserted(ticketStr);// TODO Auto-generated method stub
 		
 	}
 
@@ -38,7 +74,9 @@ public class PaystationController
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
+		controller.ticketTaken();
+		ticketPrinterTextArea.setText("");
+		barcodeTextField.setText("");// TODO Auto-generated method stub
 		
 	}
 

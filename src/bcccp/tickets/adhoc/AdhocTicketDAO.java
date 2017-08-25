@@ -15,7 +15,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	}
 
 
-	//detection of car arrival
+	//detection of car arrival 
 	@Override
 	public IAdhocTicket createTicket(String carparkId) {
 		// TODO Auto-generated method stub

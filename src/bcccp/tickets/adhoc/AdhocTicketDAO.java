@@ -37,6 +37,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	public List<IAdhocTicket> getCurrentTickets() {
 		// TODO Auto-generated method stub
 		return null;
+	//code implemantation
 	}
 
 	

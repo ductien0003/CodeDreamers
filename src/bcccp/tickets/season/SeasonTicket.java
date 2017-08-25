@@ -19,34 +19,31 @@ public class SeasonTicket implements ISeasonTicket {
 			             long startValidPeriod,
 			             long endValidPeriod) {
 		//TDO Imp
-		this.ticketId = ticketId;
-		this.carparkId = carparkId;
-		this.startValidPeriod = startValidPeriod;
-		this.endValidPeriod = endValidPeriod;
+
 	}
 
 	@Override
 	public String getId() {
 		// TODO Auto-generated method stub
-		return ticketId;
+		return null;
 	}
 
 	@Override
 	public String getCarparkId() {
 		// TODO Auto-generated method stub
-		return carparkId;
+		return null;
 	}
 
 	@Override
 	public long getStartValidPeriod() {
 		// TODO Auto-generated method stub
-		return startValidPeriod;
+		return null;
 	}
 
 	@Override
 	public long getendValidPeriod() {
 		// TODO Auto-generated method stub
-		return endValidPeriod;
+		return null;
 	}
 
 	@Override
@@ -58,26 +55,26 @@ public class SeasonTicket implements ISeasonTicket {
 	@Override
 	public void recordUsage(IUsageRecord record) {
 		// TODO Auto-generated method stub
-		record = startValidPeriod - endValidPeriod;
+
 
 	}
 
 	@Override
 	public IUsageRecord getCurrentUsageRecord() {
 		// TODO Auto-generated method stub
-		return recordUsage;
+		return null;
 	}
 
 	@Override
 	public void endUsage(long dateTime) {
-		this.endUsage = dateTime;
+
 
 	}
 
 	@Override
 	public List<IUsageRecord> getUsageRecords() {
 		// TODO Auto-generated method stub
-		return <IUsageRecord>;
+		return null;
 	}
 
 

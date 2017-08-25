@@ -32,7 +32,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	}
 
 
-
+	// checking system ejecting the ticket
 	@Override
 	public List<IAdhocTicket> getCurrentTickets() {
 		// TODO Auto-generated method stub

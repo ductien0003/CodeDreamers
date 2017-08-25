@@ -24,7 +24,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	}
 
 
-
+	//checks ticket validity
 	@Override
 	public IAdhocTicket findTicketByBarcode(String barcode) {
 		// TODO Auto-generated method stub

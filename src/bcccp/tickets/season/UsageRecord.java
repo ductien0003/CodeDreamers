@@ -14,6 +14,10 @@ public class UsageRecord implements IUsageRecord {
 		this.ticketId = ticketId;
 		this.startDateTime = StartDateTime;
 
+
+		
+		
+
 	}
 
 

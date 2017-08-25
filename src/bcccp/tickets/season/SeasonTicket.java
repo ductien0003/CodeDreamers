@@ -53,7 +53,7 @@ public class SeasonTicket implements ISeasonTicket {
 	@Override
 	public boolean inUse() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override

@@ -6,7 +6,7 @@ public class UsageRecordFactory implements IUsageRecordFactory {
 	public IUsageRecord make(String ticketId, long startDateTime) {
 		// TODO Auto-generated method stub
 		return this.ticketId;
-		//checking the functionality of merge
+		//checking the functionality of merge 
 	}
 
 

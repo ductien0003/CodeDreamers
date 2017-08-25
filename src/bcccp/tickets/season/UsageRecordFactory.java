@@ -7,6 +7,7 @@ public class UsageRecordFactory implements IUsageRecordFactory {
 		// TODO Auto-generated method stub
 		return this.ticketId;
 		//checking the functionality of merge  exit time record
+	// incrementaion of available spaces
 	}
 
 

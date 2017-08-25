@@ -53,12 +53,13 @@ public class SeasonTicket implements ISeasonTicket {
 	@Override
 	public boolean inUse() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public void recordUsage(IUsageRecord record) {
 		// TODO Auto-generated method stub
+		record = startDateTime - endDateTime;
 
 
 	}

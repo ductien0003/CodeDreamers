@@ -65,7 +65,8 @@ private Date parseDate(String date) {
 
 	@Override
 	public void ticketPaid() {
-		// TODO Auto-generated method stub
+		String ticketStr = barcodeTextField.getText();
+		controller.ticketInserted(ticketStr);// TODO Auto-generated method stub
 		
 	}
 
@@ -73,7 +74,9 @@ private Date parseDate(String date) {
 
 	@Override
 	public void ticketTaken() {
-		// TODO Auto-generated method stub
+		controller.ticketTaken();
+		ticketPrinterTextArea.setText("");
+		barcodeTextField.setText("");// TODO Auto-generated method stub
 		
 	}
 

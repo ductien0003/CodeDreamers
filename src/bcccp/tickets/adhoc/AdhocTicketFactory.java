@@ -7,7 +7,7 @@ public class AdhocTicketFactory implements IAdhocTicketFactory {
 	public IAdhocTicket make(String carparkId, int ticketNo) {
 		// TODO Auto-generated method stub
 		return this.carparkId;
-	//Under process 
+	//Under process  detection of the exit of the car
 	}
 
 
